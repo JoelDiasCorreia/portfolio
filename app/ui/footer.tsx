@@ -19,7 +19,7 @@ export default function Footer() {
           </a>
         </div>
         <p className="text-black">
-          &copy; {new Date().getFullYear()} Joel Dias Correia's Portfolio. All rights reserved.
+          &copy; {new Date().getFullYear()} Joel Dias Correia&rsquo;s Portfolio. All rights reserved.
         </p>
       </div>
     </footer>

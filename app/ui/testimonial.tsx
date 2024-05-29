@@ -13,8 +13,8 @@ export default function Testimonial() {
           <figure className="mt-10">
             <blockquote className="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
               <p>
-                “Joel was a valuable member of our team, working on our product, Compass, 
-                and his contributions were instrumental in our success. (...)”
+                &rsquo;&rsquo;Joel was a valuable member of our team, working on our product, Compass, 
+                and his contributions were instrumental in our success. (...)&rsquo;&rsquo;
               </p>
             </blockquote>
             <figcaption className="mt-10">

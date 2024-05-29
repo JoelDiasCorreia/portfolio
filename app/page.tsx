@@ -42,8 +42,8 @@ export default function Home() {
         height={150}
         className="rounded-full"
       />
-      <h2 className="mt-4 text-2xl text-black">Hello, I'm Joel Dias Correia</h2>
-      <p className="mt-2 text-lg text-slate-400">Welcome to my portfolio website. I'm a full stack developer with a passion for creating amazing web applications.</p>
+      <h2 className="mt-4 text-2xl text-black">Hello, I am Joel Dias Correia</h2>
+      <p className="mt-2 text-lg text-slate-400">Welcome to my portfolio website. I am a full stack developer with a passion for creating amazing web applications.</p>
       <a href="#contact" className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700">Get in Touch</a>
   
       <h1 id='projects' className="text-4xl font-bold mb-8 text-black pt-16">Projects</h1>

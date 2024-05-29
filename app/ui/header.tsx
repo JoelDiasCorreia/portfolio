@@ -143,7 +143,7 @@ export default function Header() {
                 href="#projects"
                 className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
               >
-                Projec#ts
+                Projects
               </a>
               <a
                 href="#contact"
