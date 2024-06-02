@@ -23,15 +23,7 @@ export default function Home() {
     image: "/projects/dcm web page.png",
     link: "https://www.dcmindustrialservices.com/",
     category: "Frontend",
-    },
-    {
-    title: "Portfolio",
-    description:
-        "The main idea is to have a simple and clean design to show my work.",
-    image: "/projects/portfolio.png",
-    link: "/",
-    category: "Fullstack",
-    },
+    }
 ];
   return (
     <main className="min-h-screen py-16 bg-white flex flex-1 flex-col items-center justify-center w-full text-center">
@@ -42,15 +34,18 @@ export default function Home() {
         height={150}
         className="rounded-full"
       />
-      <h2 className="mt-4 text-2xl text-black">Hello, I am Joel Dias Correia</h2>
-      <p className="mt-2 text-lg text-slate-400">Welcome to my portfolio website. I am a full stack developer with a passion for creating amazing web applications.</p>
+      <h2 className="mt-4 text-2xl text-black">
+        Hello, I am Joel Dias Correia
+      </h2>
+      <p className="mt-2 text-lg text-slate-400">
+        Welcome to my portfolio website. I am a full stack developer with a passion for solving business problems with technology.
+      </p>
       <a href="#contact" className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700">Get in Touch</a>
   
       <h1 id='projects' className="text-4xl font-bold mb-8 text-black pt-16">Projects</h1>
         <div className=" flex flex-wrap flex-1 flex-row items-center justify-center w-full">
             <Project project={projects[0]}></Project>
             <Project project={projects[1]}></Project>
-            <Project project={projects[2]}></Project>
         </div>
 
 

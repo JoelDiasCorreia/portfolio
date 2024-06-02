@@ -42,7 +42,13 @@ export default function Header() {
       <div className="flex lg:flex-1">
         <a href="/" className="-m-1.5 p-1.5">
           <span className="sr-only">Your Contact</span>
-          <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" />
+          <Image
+            src="/profile.png"
+            alt="Profile Picture"
+            width={38}
+            height={38}
+            className="rounded-full"
+          />
         </a>
       </div>
       <div className="flex lg:hidden">
