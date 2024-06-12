@@ -23,6 +23,14 @@ export default function Home() {
     image: "/projects/dcm web page.png",
     link: "https://www.dcmindustrialservices.com/",
     category: "Frontend",
+    },
+    {
+      title: "Oasis Real State",
+      description:
+          "This is a Real State Web Page Prototype made with the collaboration of Zoe Preiti Tasat and Camilla Regueira Aspitarte",
+      image: "/projects/oasis.png",
+      link: "https://zoepreititasat.github.io/oasis_real_state/",
+      category: "Frontend",
     }
 ];
   return (
@@ -44,8 +52,10 @@ export default function Home() {
   
       <h1 id='projects' className="text-4xl font-bold mb-8 text-black pt-16">Projects</h1>
         <div className=" flex flex-wrap flex-1 flex-row items-center justify-center w-full">
-            <Project project={projects[0]}></Project>
-            <Project project={projects[1]}></Project>
+            {
+              projects.map((project)=> <Project project={project} />)
+            }
+    
         </div>
 
 

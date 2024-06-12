@@ -21,7 +21,7 @@ export const Project = (props: { project: ProjectType }) => {
           alt={props.project.title}
           sizes="100vw"
           className="rounded-t-lg"
-          style={{ width: "auto", height: "200px" }} // optional
+          style={{ width: "auto", height: "auto" }} // optional
         />
         <div className="p-5">
           <h2 className="text-black text-lg">{props.project.title}</h2>
