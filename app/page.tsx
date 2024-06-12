@@ -53,7 +53,7 @@ export default function Home() {
       <h1 id='projects' className="text-4xl font-bold mb-8 text-black pt-16">Projects</h1>
         <div className=" flex flex-wrap flex-1 flex-row items-center justify-center w-full">
             {
-              projects.map((project)=> <Project project={project} />)
+              projects.map((project: ProjectType, index: number)=> <Project project={project} key={index} />)
             }
     
         </div>
