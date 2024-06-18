@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CaféVIP: CRM especializado para cafeterías que permite gestionar recompensas y fidelizar a tus clientes.">
+    <title>CaféVIP - CRM para Cafeterías</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_TRACKING_ID');
+    </script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <span class="material-symbols-outlined">
+                    store
+                </span>
+                CaféVIP
+            </div>
+            <button class="menu-toggle" id="menu-toggle">
+                ☰
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#features">Características</a></li>
+                <li><a href="#benefits">Beneficios</a></li>
+                <li><a href="#app-preview">Vista de la App</a></li>
+                <li><a href="#demo">Solicitar Demostración</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <video autoplay muted loop id="hero-video">
+            <source src="video/cafe-background.mp4" type="video/mp4">
+            Tu navegador no soporta la etiqueta de video.
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>CRM para Cafeterías</h1>
+            <p>Fideliza a tus clientes y gestiona recompensas con CaféVIP</p>
+            <a href="#demo" class="cta-button animated-shadow-scale" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Solicitar Demostración'});">Solicitar Demostración</a>
+        </div>
+    </section>
+    <section id="features" class="features">
+        <h2>Características</h2>
+        <div class="feature-list">
+            <div class="feature-item animated-shadow-scale">
+                <span class="material-symbols-outlined">
+                    emoji_events
+                </span>
+                <h3>Gestión de Recompensas</h3>
+                <p>Administra las recompensas para tus clientes de manera fácil y eficiente.</p>
+            </div>
+            <div class="feature-item animated-shadow-scale">
+                <span class="material-symbols-outlined">
+                    currency_exchange
+                </span>
+                <h3>Fidelización</h3>
+                <p>Incrementa la lealtad de tus clientes con un programa de puntos y premios.</p>
+            </div>
+            <div class="feature-item animated-shadow-scale">
+                <span class="material-symbols-outlined">
+                    analytics
+                </span>
+                <h3>Informes Detallados</h3>
+                <p>Obtén informes detallados sobre el comportamiento y preferencias de tus clientes.</p>
+            </div>
+        </div>
+    </section>
+    <section id="benefits" class="benefits">
+        <h2>Beneficios</h2>
+        <div class="benefit-list">
+            <div class="benefit-item animated-shadow-scale">
+                <span class="material-symbols-outlined">
+                    group_add
+                </span>
+                <h3>Mejora la Retención</h3>
+                <p>Fideliza a tus clientes y aumenta su frecuencia de visitas.</p>
+            </div>
+            <div class="benefit-item animated-shadow-scale">
+                <span class="material-symbols-outlined">
+                    trending_up
+                </span>
+                <h3>Aumenta tus Ingresos</h3>
+                <p>Incrementa tus ventas ofreciendo recompensas atractivas.</p>
+            </div>
+            <div class="benefit-item animated-shadow-scale">
+                <span class="material-symbols-outlined">
+                    search_insights
+                </span>
+                <h3>Analiza y Optimiza</h3>
+                <p>Utiliza los datos para mejorar tu estrategia de negocio.</p>
+            </div>
+        </div>
+    </section>
+    <section id="app-preview" class="app-preview">
+        <h2>Vista de la App</h2>
+        <div class="app-images">
+            <img src="images/app-screen4.png" class="animated-shadow-scale" alt="Vista de la App - Pantalla 4 ">
+            <img src="images/app-screen1.png" class="animated-shadow-scale" alt="Vista de la App - Pantalla 1">
+            <img src="images/app-screen2.png" class="animated-shadow-scale" alt="Vista de la App - Pantalla 2">
+            <img src="images/app-screen3.png" class="animated-shadow-scale" alt="Vista de la App - Pantalla 3">
+        </div>
+    </section>
+    <section id="demo" class="demo">
+        <h2>Solicitar Demostración</h2>
+        <form class="demo-form" onsubmit="handleFormSubmit(event)">
+            <div class="form-group">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="name" placeholder="Nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo Electrónico</label>
+                <input type="email" id="email" name="email" placeholder="Correo Electrónico" required>
+            </div>
+            <div class="form-group">
+                <label for="business">Nombre de la Cafetería</label>
+                <input type="text" id="business" name="business" placeholder="Nombre de la Cafetería" required>
+            </div>
+            <button type="submit" class="cta-button" onclick="gtag('event', 'submit', {'event_category': 'Formulario', 'event_label': 'Solicitar Demostración'});">Enviar</button>
+        </form>
+    </section>
+    <footer class="footer">
+        <p>&copy; 2024 CaféVIP. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            // Lógica de envío del formulario
+        }
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Menu toggle for mobile view
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('nav-links').classList.toggle('nav-active');
+        });
+    </script>
+</body>
+</html>
