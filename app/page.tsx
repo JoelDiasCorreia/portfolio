@@ -73,7 +73,7 @@ export default function Home() {
     
         </div>
 
-      <h1 id='companies' className="text-xl font-bold mb-8 text-black pt-16">I'm proud to have collaborated with some awesome companies:</h1>
+      <h1 id='companies' className="text-xl font-bold mb-8 text-black pt-16">I am proud to have collaborated with some awesome companies:</h1>
       <div className="flex flex-wrap flex-1 flex-row items-center justify-center w-full">
           {
             companies.map((company: { image: string, name: string}, index: number)=>{
