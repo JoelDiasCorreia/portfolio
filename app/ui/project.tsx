@@ -25,8 +25,8 @@ export const Project = (props: { project: ProjectType }) => {
         />
         <div className="p-5">
           <h2 className="text-black text-lg">{props.project.title}</h2>
-          <h3 className="text-black text-md">{props.project.category}</h3>
-          <p className="text-black"> {props.project.description}</p>
+          <h3 className="text-black text-md font-bold">{props.project.category}</h3>
+          <p className="text-slate-600"> {props.project.description}</p>
         </div>
       </div>
     </Link>

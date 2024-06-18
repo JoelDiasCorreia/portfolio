@@ -33,6 +33,21 @@ export default function Home() {
       category: "Frontend",
     }
 ];
+
+  const companies = [
+    {
+      image: "/brands/MillerKnoll-Logo.png",
+      name: "MillerKnoll"
+    },
+    {
+      image: "/brands/opendevpro.png",
+      name: "OpenDevPro"
+    },
+    {
+      image: "/brands/siemens.png",
+      name: "Siemens"
+    }
+  ]
   return (
     <main className="min-h-screen py-16 bg-white flex flex-1 flex-col items-center justify-center w-full text-center">
       <Image
@@ -57,6 +72,27 @@ export default function Home() {
             }
     
         </div>
+
+      <h1 id='companies' className="text-xl font-bold mb-8 text-black pt-16">I'm proud to have collaborated with some awesome companies:</h1>
+      <div className="flex flex-wrap flex-1 flex-row items-center justify-center w-full">
+          {
+            companies.map((company: { image: string, name: string}, index: number)=>{
+              return (
+                <Image 
+                  key={index} 
+                  src={company.image} 
+                  alt={company.name}
+                  height={200} 
+                  width={200}
+                  className="m-4 cursor-pointer"
+                />
+              )
+            } )
+          }
+  
+      </div>
+
+        
 
 
         <Contact></Contact>
