@@ -54,11 +54,6 @@ body {
     text-decoration: none;
 }
 
-.nav-links a:hover {
-    font-weight: bold;
-}
-
-
 .menu-toggle {
     display: none;
     background: none;
