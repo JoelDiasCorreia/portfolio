@@ -21,7 +21,7 @@ body {
   'opsz' 24
 }
 .header {
-    background-color: #166534; /* Verde similar a Starbucks */
+    background-color: rgb(44 44 44 / 70%);    
     color: #fff;
     padding: 20px;
     position: fixed;
@@ -81,7 +81,7 @@ body {
     color: #fff;
     text-align: center;
     height: 100vh;
-    margin-top: 60px; /* Adjusted for fixed header */
+    margin-top: 0px; /* Adjusted for fixed header */
 }
 
 #hero-video {
@@ -190,6 +190,8 @@ body {
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
+    padding: 5px;
+    background: white;
 }
 
 .demo-form {
