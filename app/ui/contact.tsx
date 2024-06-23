@@ -40,7 +40,7 @@ export default function Contact() {
     
       return (
 
-          <main id="contact" className="text-white border border-green-600 rounded-lg backdrop-blur-md bg-black/30  flex flex-col items-center justify-center py-16 w-full flex-1 text-center">
+          <main id="contact" className="text-white border border-green-600 rounded-lg backdrop-blur-sm bg-black/30  flex flex-col items-center justify-center py-16 w-full flex-1 text-center">
             <h1 className="text-4xl font-bold mb-8">Contact Me</h1>
             <form onSubmit={handleSubmit} className="w-full max-w-lg p-5">
               <div className="mb-4">
@@ -79,7 +79,12 @@ export default function Contact() {
                   required
                 />
               </div>
-              <button type="submit" className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">Submit</button>
+              <button 
+                
+                type="submit" 
+                className="w-full px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">
+                  Submit
+              </button>
             </form>
           </main>
       );

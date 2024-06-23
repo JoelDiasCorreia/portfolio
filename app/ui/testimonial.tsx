@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Testimonial() {
     return (
-      <section className="border border-green-600 p-5 rounded-lg backdrop-blur-md bg-black/30  overflow-hidden px-6 py-24 sm:py-32 ">
+      <section className="border border-green-600 p-5 rounded-lg backdrop-blur-sm bg-black/30  overflow-hidden px-6 py-5 ">
         <div className="mx-auto max-w-2xl lg:max-w-4xl ">
           <div className="bg-white w-fit m-auto px-5 rounded-lg">
             <Image className="mx-auto" src="/brands/MillerKnoll-Logo.png" alt="" 

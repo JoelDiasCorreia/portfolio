@@ -1,13 +1,16 @@
 "use client";
 import Image from "next/image";
 import { Project } from "./ui/project";
-
 import Testimonial from "./ui/testimonial";
 import Contact from "./ui/contact";
 import { ProjectType } from "./ui/project"; // Import the ProjectType interface
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { useState, useEffect, useMemo } from "react";
 import { loadSlim } from "@tsparticles/slim";
+import { CodeBracketIcon, ServerStackIcon } from "@heroicons/react/24/outline";
+// import json file 
+import ParticlesConfigMap from "./particles.config.json";
+
 
 export default function Home() {
   const [init, setInit] = useState(false);
@@ -67,512 +70,10 @@ export default function Home() {
   ];
 
   const options = useMemo(
-    () => ({
-      "autoPlay": true,
-      "background": {
-        "color": {
-          "value": "#19191e"
-        },
-        "image": "",
-        "position": "",
-        "repeat": "",
-        "size": "",
-        "opacity": 1
-      },
-      "backgroundMask": {
-        "composite": "destination-out",
-        "cover": {
-          "color": {
-            "value": "#fff"
-          },
-          "opacity": 1
-        },
-        "enable": false
-      },
-      "clear": true,
-      "defaultThemes": {},
-      "delay": 0,
-      "fullScreen": {
-        "enable": true,
-        "zIndex": 0
-      },
-      "detectRetina": true,
-      "duration": 0,
-      "fpsLimit": 45,
-      "interactivity": {
-        "detectsOn": "window",
-        "events": {
-          "onClick": {
-            "enable": false,
-            "mode": "push"
-          },
-          "onDiv": {
-            "selectors": {},
-            "enable": false,
-            "mode": {},
-            "type": "circle"
-          },
-          "onHover": {
-            "enable": false,
-            "mode": "grab",
-            "parallax": {
-              "enable": true,
-              "force": 60,
-              "smooth": 10
-            }
-          },
-          "resize": {
-            "delay": 0.5,
-            "enable": false
-          }
-        },
-        "modes": {
-          "trail": {
-            "delay": 1,
-            "pauseOnStop": false,
-            "quantity": 1
-          },
-          "attract": {
-            "distance": 100,
-            "duration": 0.4,
-            "easing": "ease-out-quad",
-            "factor": 1,
-            "maxSpeed": 50,
-            "speed": 1
-          },
-          "bounce": {
-            "distance": 200
-          },
-          "bubble": {
-            "distance": 400,
-            "duration": 2,
-            "mix": false,
-            "opacity": 0.8,
-            "size": 40,
-            "divs": {
-              "distance": 200,
-              "duration": 0.4,
-              "mix": false,
-              "selectors": {}
-            }
-          },
-          "connect": {
-            "distance": 80,
-            "links": {
-              "opacity": 0.5
-            },
-            "radius": 10
-          },
-          "grab": {
-            "distance": 150,
-            "links": {
-              "blink": false,
-              "consent": false,
-              "opacity": 1
-            }
-          },
-          "push": {
-            "default": true,
-            "groups": [],
-            "quantity": 4
-          },
-          "remove": {
-            "quantity": 2
-          },
-          "repulse": {
-            "distance": 200,
-            "duration": 0.4,
-            "factor": 100,
-            "speed": 1,
-            "maxSpeed": 50,
-            "easing": "ease-out-quad",
-            "divs": {
-              "distance": 200,
-              "duration": 0.4,
-              "factor": 100,
-              "speed": 1,
-              "maxSpeed": 50,
-              "easing": "ease-out-quad",
-              "selectors": {}
-            }
-          },
-          "slow": {
-            "factor": 3,
-            "radius": 200
-          },
-          "light": {
-            "area": {
-              "gradient": {
-                "start": {
-                  "value": "#ffffff"
-                },
-                "stop": {
-                  "value": "#000000"
-                }
-              },
-              "radius": 1000
-            },
-            "shadow": {
-              "color": {
-                "value": "#000000"
-              },
-              "length": 2000
-            }
-          }
-        }
-      },
-      "manualParticles": [],
-      "particles": {
-        "bounce": {
-          "horizontal": {
-            "value": 1
-          },
-          "vertical": {
-            "value": 1
-          }
-        },
-        "collisions": {
-          "absorb": {
-            "speed": 2
-          },
-          "bounce": {
-            "horizontal": {
-              "value": 1
-            },
-            "vertical": {
-              "value": 1
-            }
-          },
-          "enable": false,
-          "maxSpeed": 50,
-          "mode": "bounce",
-          "overlap": {
-            "enable": true,
-            "retries": 0
-          }
-        },
-        "color": {
-          "value": "#68f7e2",
-          "animation": {
-            "h": {
-              "count": 0,
-              "enable": false,
-              "speed": 1,
-              "decay": 0,
-              "delay": 0,
-              "sync": true,
-              "offset": 0
-            },
-            "s": {
-              "count": 0,
-              "enable": false,
-              "speed": 1,
-              "decay": 0,
-              "delay": 0,
-              "sync": true,
-              "offset": 0
-            },
-            "l": {
-              "count": 0,
-              "enable": false,
-              "speed": 1,
-              "decay": 0,
-              "delay": 0,
-              "sync": true,
-              "offset": 0
-            }
-          }
-        },
-        "effect": {
-          "close": true,
-          "fill": true,
-          "options": {},
-          "type": {}
-        },
-        "groups": [],
-        "move": {
-          "angle": {
-            "offset": 0,
-            "value": 90
-          },
-          "attract": {
-            "distance": 200,
-            "enable": false,
-            "rotate": {
-              "x": 3000,
-              "y": 3000
-            }
-          },
-          "center": {
-            "x": 50,
-            "y": 50,
-            "mode": "percent",
-            "radius": 0
-          },
-          "decay": 0,
-          "distance": {},
-          "direction": "none",
-          "drift": 0,
-          "enable": true,
-          "gravity": {
-            "acceleration": 5,
-            "enable": false,
-            "inverse": false,
-            "maxSpeed": 10
-          },
-          "path": {
-            "clamp": true,
-            "delay": {
-              "value": 0
-            },
-            "enable": false,
-            "options": {}
-          },
-          "outModes": {
-            "default": "out",
-            "bottom": "out",
-            "left": "out",
-            "right": "out",
-            "top": "out"
-          },
-          "random": false,
-          "size": false,
-          "speed": 2,
-          "spin": {
-            "acceleration": 0,
-            "enable": false
-          },
-          "straight": false,
-          "trail": {
-            "enable": false,
-            "length": 10,
-            "fill": {}
-          },
-          "vibrate": false,
-          "warp": false
-        },
-        "number": {
-          "density": {
-            "enable": true,
-            "width": 1920,
-            "height": 1080
-          },
-          "limit": {
-            "mode": "delete",
-            "value": 100
-          },
-          "value":50
-        },
-        "opacity": {
-          "value": {
-            "min": 0.1,
-            "max": 0.5
-          },
-          "animation": {
-            "count": 0,
-            "enable": true,
-            "speed": 3,
-            "decay": 0,
-            "delay": 0,
-            "sync": false,
-            "mode": "auto",
-            "startValue": "random",
-            "destroy": "none"
-          }
-        },
-        "reduceDuplicates": false,
-        "shadow": {
-          "blur": 0,
-          "color": {
-            "value": "#000"
-          },
-          "enable": false,
-          "offset": {
-            "x": 0,
-            "y": 0
-          }
-        },
-        "shape": {
-          "close": true,
-          "fill": true,
-          "options": {},
-          "type": "circle"
-        },
-        "size": {
-          "value": {
-            "min": 1,
-            "max": 5
-          },
-          "animation": {
-            "count": 0,
-            "enable": true,
-            "speed": 20,
-            "decay": 0,
-            "delay": 0,
-            "sync": false,
-            "mode": "auto",
-            "startValue": "random",
-            "destroy": "none"
-          }
-        },
-        "stroke": {
-          "width": 0
-        },
-        "zIndex": {
-          "value": 0,
-          "opacityRate": 1,
-          "sizeRate": 1,
-          "velocityRate": 1
-        },
-        "destroy": {
-          "bounds": {},
-          "mode": "none",
-          "split": {
-            "count": 1,
-            "factor": {
-              "value": 3
-            },
-            "rate": {
-              "value": {
-                "min": 4,
-                "max": 9
-              }
-            },
-            "sizeOffset": true,
-            "particles": {}
-          }
-        },
-        "roll": {
-          "darken": {
-            "enable": false,
-            "value": 0
-          },
-          "enable": false,
-          "enlighten": {
-            "enable": false,
-            "value": 0
-          },
-          "mode": "vertical",
-          "speed": 25
-        },
-        "tilt": {
-          "value": 0,
-          "animation": {
-            "enable": false,
-            "speed": 0,
-            "decay": 0,
-            "sync": false
-          },
-          "direction": "clockwise",
-          "enable": false
-        },
-        "twinkle": {
-          "lines": {
-            "enable": false,
-            "frequency": 0.05,
-            "opacity": 1
-          },
-          "particles": {
-            "enable": false,
-            "frequency": 0.05,
-            "opacity": 1
-          }
-        },
-        "wobble": {
-          "distance": 5,
-          "enable": false,
-          "speed": {
-            "angle": 50,
-            "move": 10
-          }
-        },
-        "life": {
-          "count": 0,
-          "delay": {
-            "value": 0,
-            "sync": false
-          },
-          "duration": {
-            "value": 30,
-            "sync": false
-          }
-        },
-        "rotate": {
-          "value": 0,
-          "animation": {
-            "enable": false,
-            "speed": 0,
-            "decay": 0,
-            "sync": false
-          },
-          "direction": "clockwise",
-          "path": false
-        },
-        "orbit": {
-          "animation": {
-            "count": 0,
-            "enable": false,
-            "speed": 1,
-            "decay": 0,
-            "delay": 0,
-            "sync": false
-          },
-          "enable": false,
-          "opacity": 1,
-          "rotation": {
-            "value": 45
-          },
-          "width": 1
-        },
-        "links": {
-          "blink": false,
-          "color": {
-            "value": "#2ef9e6"
-          },
-          "consent": false,
-          "distance": 150,
-          "enable": true,
-          "frequency": 1,
-          "opacity": 0.4,
-          "shadow": {
-            "blur": 5,
-            "color": {
-              "value": "#000"
-            },
-            "enable": false
-          },
-          "triangles": {
-            "enable": false,
-            "frequency": 1
-          },
-          "width": 1,
-          "warp": false
-        },
-        "repulse": {
-          "value": 0,
-          "enabled": false,
-          "distance": 1,
-          "duration": 1,
-          "factor": 1,
-          "speed": 1
-        }
-      },
-      "pauseOnBlur": false,
-      "pauseOnOutsideViewport": false,
-      "responsive": [],
-      "smooth": false,
-      "style": {},
-      "themes": [],
-      "zLayers": 100,
-      "name": "Parallax",
-      "motion": {
-        "disable": false,
-        "reduce": {
-          "factor": 4,
-          "value": true
-        }
-      }
-    }),
+    () => (
+
+      ParticlesConfigMap as any
+    ),
     []
   );
 
@@ -612,14 +113,17 @@ export default function Home() {
 
           <a
             href="#projects"
-            className="mt-4 px-4 py-2 text-green-600 rounded border-green-600 border m-2.5 hover:text-white hover:bg-green-600 backdrop-blur-md bg-black/30"
+            className="mt-4 px-4 py-2 text-green-600 rounded border-green-600 border m-2.5 hover:text-white hover:bg-green-600 backdrop-blur-sm bg-black/30"
           >
             Check my Projects
           </a>
         </div>
         <div className="flex flex-wrap flex-row items-stretch justify-center w-full m-10">
 
-          <div className="border  border-green-600 p-5 w-80 rounded-l-lg  backdrop-blur-md bg-black/30">
+          <div className="flex items-center flex-col border  border-green-600 p-5 w-80 rounded-l-lg  backdrop-blur-sm bg-black/30">
+            
+            <CodeBracketIcon className="h-9 stroke-green-500"/>
+
             <h2 className="text-2xl font-bold">Frontend Developer</h2>
             <br></br>
 
@@ -656,7 +160,9 @@ export default function Home() {
               </ul>
             </div>
           </div>
-          <div className="border  border-green-600 p-5 w-80 rounded-r-lg backdrop-blur-md bg-black/30">
+          <div className="flex items-center flex-col border  border-green-600 p-5 w-80 rounded-r-lg backdrop-blur-sm bg-black/30">
+            
+            <ServerStackIcon className="h-9  stroke-green-500"/>
             <h2 className="text-2xl font-bold">Backend Developer</h2>
             <br></br>
 
@@ -698,7 +204,7 @@ export default function Home() {
 
         <div 
         id="projects" 
-        className="border border-green-600 p-5 w-80 rounded-t-lg backdrop-blur-md bg-black/30  w-fit pb-10 mb-15">
+        className="border border-green-600 p-5 w-80 rounded-t-lg backdrop-blur-sm bg-black/30  w-fit pb-10 mb-15">
         <h1 className="text-4xl font-bold mb-8 text-white pt-16">Projects</h1>
 
         <p>
@@ -713,7 +219,7 @@ export default function Home() {
       </div>
 
 
-        <div id="companies" className="border border-green-600 p-5 w-80 rounded-b-lg backdrop-blur-md bg-black/30 w-full">
+        <div id="companies" className="border border-green-600 p-5 w-80 rounded-b-lg backdrop-blur-sm bg-black/30 w-full">
           <h1 className="text-xl font-bold mb-8 text-white pt-16">
             I am proud to have collaborated with some awesome companies:
           </h1>
@@ -721,7 +227,7 @@ export default function Home() {
             {companies.map(
               (company: { image: string; name: string }, index: number) => {
                 return (
-                  <div className="bg-white w-fit m-auto px-10 rounded-lg" key={index}>
+                  <div className="bg-white flex min-h-36 items'-enter w-fit m-auto px-10 rounded-lg" key={index}>
                     <Image
                       
                       src={company.image}
