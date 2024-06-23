@@ -78,7 +78,7 @@ export default function Home() {
   );
 
   return (
-    <main className="bg-transparent min-h-screen pt-16 flex flex-1 flex-col items-center justify-center w-full text-center">
+    <main className="font-mono bg-transparent min-h-screen pt-16 flex flex-1 flex-col items-center justify-center w-full text-center">
       <style>
         {`
         #tsparticles {
@@ -96,7 +96,9 @@ export default function Home() {
           className="rounded-full"
         />
         <h2 className="mt-4 text-2xl text-white">
-          Hello, I am Joel Dias Correia
+          Hello, I am 
+          <strong className="text-green-600 mx-2.5">Joel Dias Correia</strong>
+          
         </h2>
         <p className="mt-2 text-lg text-white">
           Welcome to my portfolio website. I am a full stack developer with a
@@ -118,7 +120,7 @@ export default function Home() {
             Check my Projects
           </a>
         </div>
-        <div className="flex flex-wrap flex-row items-stretch justify-center w-full m-10">
+        <div className="flex flex-wrap  flex-row items-stretch justify-center w-full m-10">
 
           <div className="flex items-center flex-col border  border-green-600 p-5 w-80 rounded-l-lg  backdrop-blur-sm bg-black/30">
             
@@ -167,7 +169,7 @@ export default function Home() {
             <br></br>
 
             <p>
-              I build and maintain the server-side components of web applications, 
+              I build server-side components of web applications, 
               ensuring they run smoothly and efficiently.
             </p>
 
@@ -208,8 +210,7 @@ export default function Home() {
         <h1 className="text-4xl font-bold mb-8 text-white pt-16">Projects</h1>
 
         <p>
-          Here are a few projects I&lsquo;ve worked on recently. Want to see more?
-          Email me.
+          Here are a few projects I&lsquo;ve worked on recently.
         </p>
         <div className=" flex flex-wrap flex-1 flex-row items-center justify-center w-full">
           {projects.map((project: ProjectType, index: number) => (

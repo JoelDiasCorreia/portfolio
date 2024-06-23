@@ -39,13 +39,19 @@ export default function Header() {
       <div className="flex lg:flex-1">
         <a href="/" className="-m-1.5 p-1.5">
           <span className="sr-only">Your Contact</span>
-          <Image
-            src="/profile.png"
-            alt="Profile Picture"
-            width={38}
-            height={38}
-            className="rounded-full"
-          />
+
+          <div className="flex flex-row items-center">
+            <Image
+              src="/profile.png"
+              alt="Profile Picture"
+              width={38}
+              height={38}
+              className="rounded-full"
+            />
+            <h1 className="mx-2.5 text-3xl text-green-600 font-mono">
+              Joel Dias Correia
+            </h1>
+          </div>
         </a>
       </div>
       <div className="flex lg:hidden">
@@ -100,7 +106,7 @@ export default function Header() {
         <a href="#projects" className="text-sm font-semibold leading-6 text-white">
           Projects
         </a>
-        <a href="#contact" className="p-1 px-2.5 bg-green-700 text-white rounded hover:bg-green-600 m-2.5">
+        <a href="#contact" className="p-1 px-5 bg-green-700 text-white rounded hover:bg-green-600 m-2.5">
           Get In Touch
         </a>
       </PopoverGroup>
