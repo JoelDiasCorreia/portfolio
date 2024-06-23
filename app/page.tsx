@@ -98,7 +98,7 @@ export default function Home() {
       },
       "detectRetina": true,
       "duration": 0,
-      "fpsLimit": 120,
+      "fpsLimit": 45,
       "interactivity": {
         "detectsOn": "window",
         "events": {
@@ -113,7 +113,7 @@ export default function Home() {
             "type": "circle"
           },
           "onHover": {
-            "enable": true,
+            "enable": false,
             "mode": "grab",
             "parallax": {
               "enable": true,
@@ -123,7 +123,7 @@ export default function Home() {
           },
           "resize": {
             "delay": 0.5,
-            "enable": true
+            "enable": false
           }
         },
         "modes": {
@@ -359,9 +359,9 @@ export default function Home() {
           },
           "limit": {
             "mode": "delete",
-            "value": 0
+            "value": 100
           },
-          "value": 150
+          "value":50
         },
         "opacity": {
           "value": {
@@ -493,7 +493,7 @@ export default function Home() {
             "sync": false
           },
           "duration": {
-            "value": 0,
+            "value": 30,
             "sync": false
           }
         },
@@ -557,8 +557,8 @@ export default function Home() {
           "speed": 1
         }
       },
-      "pauseOnBlur": true,
-      "pauseOnOutsideViewport": true,
+      "pauseOnBlur": false,
+      "pauseOnOutsideViewport": false,
       "responsive": [],
       "smooth": false,
       "style": {},
