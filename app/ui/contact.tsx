@@ -40,46 +40,46 @@ export default function Contact() {
     
       return (
 
-          <main id="contact" className="bg-white  flex flex-col items-center justify-center py-16 w-full flex-1 text-center">
-            <h1 className="text-4xl font-bold mb-8 text-black">Contact Me</h1>
-            <form onSubmit={handleSubmit} className="w-full max-w-lg">
+          <main id="contact" className="text-white border border-green-600 rounded-lg backdrop-blur-md bg-black/30  flex flex-col items-center justify-center py-16 w-full flex-1 text-center">
+            <h1 className="text-4xl font-bold mb-8">Contact Me</h1>
+            <form onSubmit={handleSubmit} className="w-full max-w-lg p-5">
               <div className="mb-4">
-                <label className="text-black block text-left mb-2" htmlFor="name">Name</label>
+                <label className=" block text-left mb-2" htmlFor="name">Name</label>
                 <input
                   id="name"
                   name="name"
                   type="text"
                   value={form.name}
                   onChange={handleChange}
-                  className="text-black w-full px-3 py-2 border border-gray-300 rounded"
+                  className="w-full px-3 py-2 border border-gray-300 rounded bg-transparent"
                   required
                 />
               </div>
               <div className="mb-4">
-                <label className="block text-black text-left mb-2" htmlFor="email">Email</label>
+                <label className="block  text-left mb-2" htmlFor="email">Email</label>
                 <input
                   id="email"
                   name="email"
                   type="email"
                   value={form.email}
                   onChange={handleChange}
-                  className="text-black w-full px-3 py-2 border border-gray-300 rounded"
+                  className="w-full px-3 py-2 border border-gray-300 rounded  bg-transparent"
                   required
                 />
               </div>
               <div className="mb-4">
-                <label className="block text-black text-left mb-2" htmlFor="message">Message</label>
+                <label className="block  text-left mb-2" htmlFor="message">Message</label>
                 <textarea
                   id="message"
                   name="message"
                   value={form.message}
                   onChange={handleChange}
-                  className="text-black w-full px-3 py-2 border border-gray-300 rounded"
+                  className="w-full px-3 py-2 border border-gray-300 rounded  bg-transparent"
                   rows={4}
                   required
                 />
               </div>
-              <button type="submit" className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700">Submit</button>
+              <button type="submit" className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">Submit</button>
             </form>
           </main>
       );

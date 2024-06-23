@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-white outline outline-slate-300 flex items-center justify-center w-full h-24">
+    <footer className="backdrop-blur-md bg-black/30 flex items-center justify-center w-full h-24">
       <div className="flex flex-col items-center space-y-2">
         <div className="flex space-x-4">
           <a
@@ -18,7 +18,7 @@ export default function Footer() {
             Email
           </a>
         </div>
-        <p className="text-black">
+        <p className="text-white">
           &copy; {new Date().getFullYear()} Joel Dias Correia&rsquo;s Portfolio. All rights reserved.
         </p>
       </div>
