@@ -105,7 +105,7 @@ export default function Home() {
           passion for solving business problems with technology.
         </p>
 
-        <div className="p-5">
+        <div className="p-5 flex flex-row flex-wrap justify-center">
           <a
             href="#contact"
             className="mt-4 px-4 py-2 bg-green-700 text-white rounded hover:bg-green-600 m-2.5"
@@ -207,7 +207,7 @@ export default function Home() {
         <div 
         id="projects" 
         className="border border-green-600 p-5 w-80 rounded-t-lg backdrop-blur-sm bg-black/30  w-fit pb-10 mb-15">
-        <h1 className="text-4xl font-bold mb-8 text-white pt-16">Projects</h1>
+        <h1 className="text-4xl font-bold text-white p-8">Projects</h1>
 
         <p>
           Here are a few projects I&lsquo;ve worked on recently.
@@ -220,7 +220,7 @@ export default function Home() {
       </div>
 
 
-        <div id="companies" className="border border-green-600 p-5 w-80 rounded-b-lg backdrop-blur-sm bg-black/30 w-full">
+        <div id="companies" className="border border-green-600 p-5 w-80 rounded-b-lg backdrop-blur-sm bg-black/30  w-fit pb-10 mb-15">
           <h1 className="text-xl font-bold mb-8 text-white pt-16">
             I am proud to have collaborated with some awesome companies:
           </h1>
@@ -228,14 +228,14 @@ export default function Home() {
             {companies.map(
               (company: { image: string; name: string }, index: number) => {
                 return (
-                  <div className="bg-white flex min-h-36 items'-enter w-fit m-auto px-10 rounded-lg" key={index}>
+                  <div className="bg-white w-80 flex min-h-36 items-center m-3 rounded-lg" key={index}>
                     <Image
                       
                       src={company.image}
                       alt={company.name}
                       height={200}
                       width={200}
-                      className="m-4 cursor-pointer"
+                      className=" my-4 mx-auto cursor-pointer object-contain"
                     />
 
                   </div>
@@ -259,3 +259,5 @@ export default function Home() {
     </main>
   );
 }
+
+
